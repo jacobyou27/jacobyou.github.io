@@ -60,7 +60,7 @@ title: "Home"
   </ul>
 </section>
 
-<section id="products">
+<section id="projects">
   <h2>Products</h2>
   <ul>
     <li>Product 1 - Description</li>

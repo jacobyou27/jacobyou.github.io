@@ -10,6 +10,12 @@ title: "Home"
 
 <section id="resume" class="section-resume">
   <h2>Resume</h2>
+  <h3>Education</h3>
+  <p><strong>Duke University</strong>, Durham, NC</p>
+  <p>B.S. Computer Science, Statistics (Aug 2023 – May 2027)</p>
+  <p>GPA: 4.0/4.0</p>
+  <p>Relevant Coursework: Data Structures and Algorithms, Calculus II, Data Science, Computer Architecture, Regression Analysis</p>
+
   <h3>Experiences</h3>
   <h4>Duke University Laber Labs, Durham, NC</h4>
   <p><strong>Student Researcher</strong> (Apr 2024 – Present)</p>
@@ -50,10 +56,6 @@ title: "Home"
     <li>Created a program detecting specific minerals in images using interpolation and machine learning.</li>
     <li>Implemented image recognition software to analyze data from Mars rovers through cross-functional collaboration and UI/UX research.</li>
   </ul>
-
-  <h3>Education</h3>
-  <p><strong>Duke University</strong>, Durham, NC</p>
-  <p>B.S. Computer Science, Statistics (Aug 2023 – May 2027)</p>
 </section>
 
 <section id="projects" class="section-projects">
@@ -65,4 +67,5 @@ title: "Home"
 
 <section id="contact" class="section-contact">
   <h2>Contact Information</h2>
-  <p>You can contact me at <a href="mailto:{{ site.email
+  <p>You can contact me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+</section>

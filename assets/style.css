@@ -1,54 +1,157 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+/* Basic Reset */
+body, html {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
+/* Header Styling */
 header {
-  background: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
 }
 
-nav ul {
+header nav ul {
   list-style: none;
   padding: 0;
+  text-align: center;
+  margin: 0;
 }
 
-nav ul li {
+header nav ul li {
   display: inline;
-  margin: 0 1rem;
+  margin: 0 10px;
 }
 
-nav ul li a {
-  color: #fff;
+a {
+  color: white;
   text-decoration: none;
 }
 
-main {
-  padding: 2rem;
+a:hover {
+  text-decoration: underline;
 }
 
-section {
-  margin-bottom: 2rem;
+#home {
+  background: url('/assets/banner.jpg') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  width: 100%; 
+  height: 100vh; 
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+
+/* Optional: Enhance the visibility of text over the banner */
+#home h1, #home p {
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensures the text color is white for better visibility */
+#home .text-white {
+  color: white;
+}
+
+/* General styling for all sections to remove margins and padding */
+section, footer {
+  padding: 40px 20px;
+  width: 100%;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  border: none;
+}
+
+/* Specific background colors for each section */
+#about {
+  background-color: #f8f9fa;
+}
+
+#resume {
+  background-color: #f8f9fa;  /* Soft grey background for the resume section */
+  color: #333;  /* Dark grey text for better readability */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
+  padding: 40px 0;  /* Top and bottom padding for the resume section */
+}
+
+.resume-container {
+  width: 80%; /* Set the width of the container to 80% of the viewport */
+  max-width: 960px; /* Maximum width to ensure content is not too stretched on larger screens */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.resume-entry {
+  margin-bottom: 40px; /* Space between each resume entry */
+  padding: 20px; /* Padding inside each resume entry */
+  background: #ffffff;  /* White background for each entry for emphasis */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Soft shadow for 3D effect */
+  border-radius: 8px; /* Slightly rounded corners for a modern look */
+}
+
+.resume-entry h3 {
+  color: #007bff;  /* Blue color for section titles (h3 tags) */
+  font-size: 1.5em;  /* Slightly larger font size for titles */
+}
+
+.date {
+  font-size: 0.9em; /* Smaller font size for dates */
+  color: #666; /* Light grey for dates */
+  font-style: italic; /* Italicize the date */
+  margin-bottom: 10px; /* Space below the date */
+}
+
+ul {
+  list-style: inside square; /* Square bullet points inside the list */
+  padding-left: 20px; /* Padding inside the list */
+}
+
+li {
+  margin-bottom: 8px; /* Margin below each list item */
+  line-height: 1.6; /* Line height for better readability */
+  text-align: left; /* Ensure text aligns left */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .resume-container {
+      width: 95%; /* Wider container on smaller screens */
+  }
+
+  .resume-entry {
+      padding: 15px; /* Less padding in smaller containers */
+  }
+
+  h3 {
+      font-size: 1.3em; /* Smaller font size for titles on small screens */
+  }
+}
+
+
+#projects {
+  background-color: #dee2e6;
+}
+
+#activities {
+  background-color: #ced4da;
 }
 
 footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
+  background-color: black;
+  color: white;
 }
 
-h2, h3, h4 {
-  color: #333;
-}
-
-@media (max-width: 768px) {
-  nav ul li {
-    display: block;
-    margin: 0.5rem 0;
-  }
-}

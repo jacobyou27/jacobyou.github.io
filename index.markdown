@@ -3,24 +3,18 @@ layout: default
 title: "Home"
 ---
 
-<section id="home">
+<section id="home" class="section-home">
   <h2>Introduction</h2>
   <p>Welcome to my personal website! Here you can find information about my projects, publications, and products.</p>
 </section>
 
-<section id="about">
+<section id="about" class="section-about">
   <h2>About</h2>
   <p>I am Jacob You, a student at Duke University pursuing a B.S. in Computer Science and Statistics. My interests include AI, machine learning, and data analysis. I am involved in various research projects and extracurricular activities that enhance my skills and knowledge in these fields.</p>
 </section>
 
-<section id="resume">
+<section id="resume" class="section-resume">
   <h2>Resume</h2>
-  <h3>Education</h3>
-  <p><strong>Duke University</strong>, Durham, NC</p>
-  <p>B.S. Computer Science, Statistics (Aug 2023 – May 2027)</p>
-  <p>GPA: 4.0/4.0</p>
-  <p>Relevant Coursework: Data Structures and Algorithms, Calculus II, Data Science, Computer Architecture, Regression Analysis</p>
-
   <h3>Experiences</h3>
   <h4>Duke University Laber Labs, Durham, NC</h4>
   <p><strong>Student Researcher</strong> (Apr 2024 – Present)</p>
@@ -61,16 +55,20 @@ title: "Home"
     <li>Created a program detecting specific minerals in images using interpolation and machine learning.</li>
     <li>Implemented image recognition software to analyze data from Mars rovers through cross-functional collaboration and UI/UX research.</li>
   </ul>
+
+  <h3>Education</h3>
+  <p><strong>Duke University</strong>, Durham, NC</p>
+  <p>B.S. Computer Science, Statistics (Aug 2023 – May 2027)</p>
 </section>
 
-<section id="projects">
+<section id="projects" class="section-projects">
   <h2>Projects</h2>
   <h3>Research Paper on Annotator Demographics</h3>
   <p>Co-authored a paper titled "Impact of Annotator Demographics on Sentiment Dataset Labeling" published in PACM HCI. Presented research at the 25th ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW 2022).</p>
   <p><a href="https://doi.org/10.1145/3555632">Read the paper</a></p>
 </section>
 
-<section id="contact">
+<section id="contact" class="section-contact">
   <h2>Contact Information</h2>
   <p>You can contact me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
 </section>

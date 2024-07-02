@@ -1,71 +1,155 @@
----
-layout: default
-title: "Home"
----
-
-<section id="about" class="section-about">
-  <h2>About</h2>
-  <p>I am Jacob You, a student at Duke University pursuing a B.S. in Computer Science and Statistics. My interests include AI, machine learning, and data analysis. I am involved in various research projects and extracurricular activities that enhance my skills and knowledge in these fields.</p>
-</section>
-
-<section id="resume" class="section-resume">
-  <h2>Resume</h2>
-  <h3>Education</h3>
-  <p><strong>Duke University</strong>, Durham, NC</p>
-  <p>B.S. Computer Science, Statistics (Aug 2023 – May 2027)</p>
-  <p>GPA: 4.0/4.0</p>
-  <p>Relevant Coursework: Data Structures and Algorithms, Calculus II, Data Science, Computer Architecture, Regression Analysis</p>
-
-  <h3>Experiences</h3>
-  <h4>Duke University Laber Labs, Durham, NC</h4>
-  <p><strong>Student Researcher</strong> (Apr 2024 – Present)</p>
-  <ul>
-    <li>Conducted probabilistic Machine Learning research projects under Professor Eric Laber.</li>
-    <li>Developed a multi-agent movement simulator using Python, pathfinding algorithms, and reinforcement learning AI.</li>
-    <li>Utilized Git for version control and project management, ensuring seamless collaboration and code integration.</li>
-  </ul>
-
-  <h4>Healthy Acres, Moorpark, CA</h4>
-  <p><strong>Software Engineer Intern</strong> (June 2022 – Aug 2022)</p>
-  <ul>
-    <li>Utilized Python to clean and analyze CSV data using APIs from Irrometer, VCWD, and SCE.</li>
-    <li>Automated monthly summaries and graphs of the farm’s systems, reducing expenditure by 37%.</li>
-    <li>Spearheaded predictive modeling efforts and data visualization to improve business decision-making.</li>
-    <li>Presented model and findings to team and leadership after feature implementation.</li>
-  </ul>
-
-  <h4>Q-Munity (Quantum Computing), Los Angeles, CA</h4>
-  <p><strong>Research Fellow</strong> (June 2022 – Aug 2022)</p>
-  <ul>
-    <li>Collaborated with University of Oxford Professor Rupesh Srivastava to explore and analyze Quantum Natural Language Processing algorithms.</li>
-    <li>Designed and engineered a QNLP algorithm to determine the meaning of simple sentences in a simulated quantum computing environment.</li>
-  </ul>
-
-  <h4>UC Santa Barbara Four Eyes Lab, Santa Barbara, CA</h4>
-  <p><strong>Research Intern</strong> (June 2021 – Aug 2023)</p>
-  <ul>
-    <li>Investigated the effect of demographics on multimodal label noise and uncertainty in machine learning datasets.</li>
-    <li>Analyzed demographic differences among annotators and their impact on sentiment analysis ratings.</li>
-    <li>Co-authored a paper titled "Impact of Annotator Demographics on Sentiment Dataset Labeling" published in PACM HCI.</li>
-    <li>Presented research at the 25th ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW 2022).</li>
-  </ul>
-
-  <h4>CSUN NASA Autonomy Research Center for STEAHM, Northridge, CA</h4>
-  <p><strong>Research Intern</strong> (May 2020 – June 2021)</p>
-  <ul>
-    <li>Created a program detecting specific minerals in images using interpolation and machine learning.</li>
-    <li>Implemented image recognition software to analyze data from Mars rovers through cross-functional collaboration and UI/UX research.</li>
-  </ul>
-</section>
-
-<section id="projects" class="section-projects">
-  <h2>Projects</h2>
-  <h3>Research Paper on Annotator Demographics</h3>
-  <p>Co-authored a paper titled "Impact of Annotator Demographics on Sentiment Dataset Labeling" published in PACM HCI. Presented research at the 25th ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW 2022).</p>
-  <p><a href="https://doi.org/10.1145/3555632">Read the paper</a></p>
-</section>
-
-<section id="contact" class="section-contact">
-  <h2>Contact Information</h2>
-  <p>You can contact me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      width: 100%;
+      height: 100%;
+      scroll-behavior: smooth;
+      font-family: 'Roboto', sans-serif;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .centered {
+      position: relative;
+      text-align: center;
+      color: white;
+      margin-top: 5rem;
+    }
+    .centered img {
+      width: 100%;
+      height: auto;
+    }
+    .centered h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 4rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+    }
+    section {
+      padding: 2rem;
+      min-height: 100vh;
+      width: 100%;
+    }
+    .section-home {
+      background-color: #000;
+      color: #fff;
+    }
+    .section-home h2 {
+      color: #fff;
+    }
+    .section-about {
+      background-color: #fff;
+      color: #000;
+    }
+    .section-resume {
+      background-color: #d1d1d1;
+      color: #000;
+    }
+    .section-projects {
+      background-color: #001f3f;
+      color: #fff;
+    }
+    .section-projects h2 {
+      color: #fff;
+    }
+    .section-contact {
+      background-color: #000;
+      color: #fff;
+    }
+    .section-contact h2 {
+      color: #fff;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    h1, h2, h3, h4 {
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const target = document.getElementById(targetId);
+          const scrollOptions = {
+            top: target.offsetTop,
+            left: 0,
+            behavior: 'smooth'
+          };
+          window.scrollTo(scrollOptions);
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="home" class="centered">
+      <img src="/assets/banner.jpg" alt="Jacob You">
+      <h1>Jacob You</h1>
+    </div>
+    {{ content }}
+  </main>
+  <footer>
+    <p>Contact me at <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  </footer>
+</body>
+</html>

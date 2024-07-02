@@ -3,11 +3,6 @@ layout: default
 title: "Home"
 ---
 
-<section id="home" class="section-home">
-  <h2>Introduction</h2>
-  <p>Welcome to my personal website! Here you can find information about my projects, publications, and products.</p>
-</section>
-
 <section id="about" class="section-about">
   <h2>About</h2>
   <p>I am Jacob You, a student at Duke University pursuing a B.S. in Computer Science and Statistics. My interests include AI, machine learning, and data analysis. I am involved in various research projects and extracurricular activities that enhance my skills and knowledge in these fields.</p>
@@ -70,5 +65,4 @@ title: "Home"
 
 <section id="contact" class="section-contact">
   <h2>Contact Information</h2>
-  <p>You can contact me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
-</section>
+  <p>You can contact me at <a href="mailto:{{ site.email

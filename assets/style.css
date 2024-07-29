@@ -155,3 +155,34 @@ footer {
   color: white;
 }
 
+.contact-links {
+  margin-top: 20px;  /* Spacing from the contact title to the buttons */
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;  /* Circle shape */
+  background-color: #fff;  /* White background */
+  color: #000;  /* Black text/icons */
+  font-size: 1.2em;  /* Larger icons */
+  text-decoration: none;
+  transition: all 0.3s ease;  /* Smooth transition for all changes */
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);  /* Subtle shadow for 3D effect */
+  border: none;  /* No border */
+  margin: 5px;  /* Space between buttons */
+}
+
+.btn:hover, .btn:focus {
+  background-color: #000;  /* Black background on hover */
+  color: #fff;  /* White text/icons on hover */
+  transform: translateY(-5px) scale(1.1);  /* Raise and grow effect */
+}
+
+.btn i {
+  margin-right: 0;  /* No space needed between icon and text as there's only icon */
+}
+
